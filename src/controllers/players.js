@@ -35,7 +35,7 @@ function update (req, res, next) {
   player = model.update(player[0], name, position, nationality, number)
   res.status(200).json({ player })
 }
-``
+
 function remove (req, res, next) {
   const { id } = req.params
   if (!id) return next({ status: 400, message: `ID required` })
